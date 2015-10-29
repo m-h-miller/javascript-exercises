@@ -1,4 +1,4 @@
-Array.prototype.mein_einzigartig = function () {
+Array.prototype.meinEinzigartig = function () {
   var result = [];
   for( i = 0; i < this.length; i++ ) {
     if ( result.indexOf(this[i]) === -1 ) {
@@ -8,7 +8,7 @@ Array.prototype.mein_einzigartig = function () {
   return result;
 };
 
-Array.prototype.my_sum = function () {
+Array.prototype.mySum = function () {
   var result = [];
   for ( i=0; i < this.length - 1; i++ ) {
 
@@ -17,6 +17,20 @@ Array.prototype.my_sum = function () {
         result.push([i, j]);
       }
     }
+  }
+  return result;
+};
+
+Array.prototype.myTranspose = function () {
+  var result = [];
+
+  for (i=0; i < this[0].length; i++ ){
+    var columns = [];
+
+    for (j=0; j < this.length; j++){
+      columns.push(this[j][i]);
+    }
+    result.push(columns);
   }
   return result;
 };
